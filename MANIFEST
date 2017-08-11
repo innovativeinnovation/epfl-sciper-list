@@ -6,7 +6,11 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 README.md
 t/00-load.t
+t/01-mocksite.t
 t/boilerplate.t
 t/manifest.t
+t/MockSite.pm
 t/pod-coverage.t
 t/pod.t
+t/resources/epfl-search/a.json
+t/resources/epfl-search/b.json
