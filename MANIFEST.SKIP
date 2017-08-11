@@ -11,6 +11,8 @@ blib/
 inc/
 .editorconfig
 .travis
+.perltidyrc
+.perlcriticrc
 .lwpcookies
 .last_cover_stats
 .git/
