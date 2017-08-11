@@ -9,6 +9,8 @@ _build/
 cover_db/
 blib/
 inc/
+.editorconfig
+.travis
 .lwpcookies
 .last_cover_stats
 .git/
