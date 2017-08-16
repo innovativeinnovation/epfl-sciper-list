@@ -10,8 +10,8 @@ use File::Copy::Recursive qw/dircopy/;
 sub mockLocalSite {
   my $localdir = shift;
 
-  my $tmpDir = tempdir(CLEANUP => 1);
-  dircopy($localdir, $tmpDir);
+  my $tmpDir = tempdir( CLEANUP => 1 );
+  dircopy( $localdir, $tmpDir );
   return "file:///$tmpDir";
 }
 

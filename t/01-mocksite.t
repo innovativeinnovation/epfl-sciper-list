@@ -15,4 +15,4 @@ my $url = MockSite::mockLocalSite('t/resources/epfl-search');
 like( $url, qr/^file:\/\/\//xms, 'local file url' );
 $url =~ s/^file:\/\/\///xms;
 my @tmp = File::Find::Rule->file()->name('*.json')->in($url);
-is( scalar(@tmp), 2, 'count json files' );
+is( scalar(@tmp), 26, 'count json files' );
