@@ -39,13 +39,51 @@ if you don't export anything, such as for a purely object-oriented module.
 =cut
 
 use base 'Exporter';
-our @EXPORT_OK = qw/p_createUserAgent p_getUrl/;
+our @EXPORT_OK = qw/p_createUserAgent p_getUrl p_buildUrl retrieveSciper/;
 
 Readonly::Scalar my $TIMEOUT => 1200;
 
 Readonly::Scalar my $MAXREDIRECT => 10;
 
+Readonly::Scalar my $AUTOCOMPLETE_URL =>
+  'https://search.epfl.ch/json/autocompletename.action?maxRows=99999999&term=';
+
+our @LETTER_TO_RETRIEVE = ( 'a' .. 'z' );
+
 =head1 SUBROUTINES/METHODS
+
+=head2 retrieveSciper( )
+
+Check a url (status code, response headers, redirect location and
+redirect chain).
+
+=cut
+
+sub retrieveSciper {
+  my @listPersons = ();
+
+  my $ua = p_createUserAgent();
+  foreach my $letter (@LETTER_TO_RETRIEVE) {
+    my $response = p_getUrl( $ua, p_buildUrl($letter) );
+
+    if ( $response->is_success ) {
+      my $struct = from_json( $response->decoded_content );
+      push @listPersons, @{ $struct->{result} };
+    }
+  }
+
+  my %hash = ();
+  foreach my $per (@listPersons) {
+    $hash{ $per->{sciper} } = $per;
+  }
+
+  @listPersons = ();
+  foreach my $sciper ( sort { $a <=> $b } keys %hash ) {
+    push @listPersons, $hash{$sciper};
+  }
+
+  return @listPersons;
+}
 
 =head1 PRIVATE SUBROUTINES/METHODS
 
@@ -81,6 +119,18 @@ sub p_getUrl {
   return $ua->get($url);
 }
 
+=head2 p_buildUrl
+
+Return the autocomplete url to retrieve sciper.
+
+=cut
+
+sub p_buildUrl {
+  my $letter = shift;
+
+  return $AUTOCOMPLETE_URL . $letter;
+}
+
 =head1 AUTHOR
 
 William Belle, C<< <william.belle at gmail.com> >>
@@ -91,15 +141,11 @@ Please report any bugs or feature requests here L<https://github.com/epfl-devrun
 I will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
-
-
-
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
     perldoc EPFL::Sciper::List
-
 
 You can also look for information at:
 

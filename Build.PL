@@ -18,6 +18,7 @@ my $builder = Module::Build->new(
   build_requires => {
     'Test::More'            => 0,
     'File::Copy::Recursive' => 0.38,
+    'Test::MockModule'      => 0.12,
   },
   requires => {
     'Readonly'             => 2.05,
