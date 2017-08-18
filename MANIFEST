@@ -1,3 +1,4 @@
+bin/epfl-sciper-list.pl
 Changes
 ignore.txt
 lib/EPFL/Sciper/List.pm
