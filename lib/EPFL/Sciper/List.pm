@@ -10,7 +10,7 @@ use LWP::UserAgent;
 
 =head1 NAME
 
-EPFL::Sciper::List - Retrieve a list of all sciper
+EPFL::Sciper::List - Retrieve a list of all public active sciper from EPFL.
 
 =head1 VERSION
 
@@ -22,19 +22,19 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+Retrieve sciper from EPFL
 
-Perhaps a little code snippet.
+    use EPFL::Sciper::List qw/retrieveSciper toJson toTsv/;
 
-    use EPFL::Sciper::List;
+    my @listPersons = retrieveSciper();
+    print toJson(@listPersons);
+    print toTsv(@listPersons);
 
-    my $foo = EPFL::Sciper::List->new();
-    ...
+Via the command-line program epfl-sciper-list.pl
 
-=head1 EXPORT
+=head1 DESCRIPTION
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+A simple module to retrieve a list of all public active sciper from EPFL.
 
 =cut
 
@@ -49,22 +49,22 @@ Readonly::Scalar my $MAXREDIRECT => 10;
 Readonly::Scalar my $AUTOCOMPLETE_URL =>
   'https://search.epfl.ch/json/autocompletename.action?maxRows=99999999&term=';
 
-our @LETTER_TO_RETRIEVE = ( 'a' .. 'z' );
-
 =head1 SUBROUTINES/METHODS
 
 =head2 retrieveSciper( )
 
-Check a url (status code, response headers, redirect location and
-redirect chain).
+Return a list of persons from EPFL with information like:
+
+(sciper => 999999, firstname => 'Taylor', name => 'Swift');
 
 =cut
 
 sub retrieveSciper {
   my @listPersons = ();
+  my @alphabet    = ( 'a' .. 'z' );
 
   my $ua = p_createUserAgent();
-  foreach my $letter (@LETTER_TO_RETRIEVE) {
+  foreach my $letter (@alphabet) {
     my $response = p_getUrl( $ua, p_buildUrl($letter) );
 
     if ( $response->is_success ) {
