@@ -14,7 +14,7 @@ epfl-sciper-list.pl
 
 =head1 DESCRIPTION
 
-Get a list of all public active sciper
+Get a list of all public active sciper from EPFL
 
 =head1 VERSION
 
@@ -22,7 +22,11 @@ Version 0.01
 
 =head1 USAGE
 
-  ./epfl-sciper-list.pl
+  ./epfl-sciper-list.pl --help
+
+  ./epfl-sciper-list.pl --output=json > sciper.json
+
+  ./epfl-sciper-list.pl --output=tsv > sciper.tsv
 
 =head1 OPTIONS
 
@@ -30,7 +34,7 @@ Version 0.01
 
 =item --output=tsv|json
 
-Output format
+Output format in TSV or Json.
 
 =back
 
@@ -73,7 +77,7 @@ your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc EPFL::Sciper::List
+    perldoc epfl-sciper-list.pl
 
 You can also look for information at:
 
