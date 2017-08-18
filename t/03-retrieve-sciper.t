@@ -1,12 +1,14 @@
 use strict;
 use warnings;
 
+use IO::All;
 use lib 't/';
 use MockSite;
-use EPFL::Sciper::List qw/p_buildUrl retrieveSciper/;
+use EPFL::Sciper::List qw/p_buildUrl retrieveSciper toJson toTsv/;
 
+use Test::JSON;
 use Test::MockModule;
-use Test::More tests => 7;
+use Test::More tests => 10;
 
 is(
   p_buildUrl('k'),
@@ -40,6 +42,15 @@ $module->mock(
     return $urlRoot . q{/} . $letter . '.json';
   }
 );
+
+my $output = toJson(@personsList);
+my $content < io 't/resources/output.json';
+is_valid_json($output, 'is valid json');
+is_json($output, $content, 'same json');
+
+$output = toTsv(@personsList);
+$content < io 't/resources/output.tsv';
+is( $output, $content, 'same tsv output' );
 
 @personsList = retrieveSciper();
 is( scalar @personsList, 0, 'number of persons' );

@@ -39,7 +39,8 @@ if you don't export anything, such as for a purely object-oriented module.
 =cut
 
 use base 'Exporter';
-our @EXPORT_OK = qw/p_createUserAgent p_getUrl p_buildUrl retrieveSciper/;
+our @EXPORT_OK =
+  qw/p_createUserAgent p_getUrl p_buildUrl retrieveSciper toJson toTsv/;
 
 Readonly::Scalar my $TIMEOUT => 1200;
 
@@ -83,6 +84,36 @@ sub retrieveSciper {
   }
 
   return @listPersons;
+}
+
+=head2 toJson
+
+Return sciper list in JSON
+
+=cut
+
+sub toJson {
+  my @list = @_;
+
+  my $json = JSON->new->allow_nonref;
+  return $json->pretty->encode( \@list );
+}
+
+=head2 toTsv
+
+Return sciper list in TSV
+
+=cut
+
+sub toTsv {
+  my @list = @_;
+
+  my $output = q{};
+  foreach my $per (@list) {
+    $output .=
+      $per->{sciper} . "\t" . $per->{firstname} . "\t" . $per->{name} . "\n";
+  }
+  return $output;
 }
 
 =head1 PRIVATE SUBROUTINES/METHODS

@@ -6,7 +6,7 @@ use warnings;
 use Getopt::Long;
 use Pod::Usage;
 
-use EPFL::Sciper::List qw/retrieveSciper/;
+use EPFL::Sciper::List qw/retrieveSciper toJson toTsv/;
 
 =head1 NAME
 
@@ -24,15 +24,26 @@ Version 0.01
 
   ./epfl-sciper-list.pl
 
+=head1 OPTIONS
+
+=over 2
+
+=item --output=tsv|json
+
+Output format
+
 =back
 
 =cut
 
 our $VERSION = '0.01';
 
-my ($help);
+my ( $help, $output );
 
-GetOptions( 'help' => \$help, ) || pod2usage(2);
+GetOptions(
+  'output=s' => \$output,
+  'help'     => \$help,
+) || pod2usage(2);
 
 if ($help) {
   pod2usage(1);
@@ -41,9 +52,11 @@ if ($help) {
 
 my @listPersons = retrieveSciper();
 
-foreach my $person (@listPersons) {
-  print $person->{sciper}, "\t", $person->{firstname}, "\t",
-    $person->{name}, "\n";
+if ( $output eq 'json' ) {
+  print toJson(@listPersons);
+}
+else {
+  print toTsv(@listPersons);
 }
 
 =head1 AUTHOR

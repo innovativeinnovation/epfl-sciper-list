@@ -41,3 +41,5 @@ t/resources/epfl-search/w.json
 t/resources/epfl-search/x.json
 t/resources/epfl-search/y.json
 t/resources/epfl-search/z.json
+t/resources/output.json
+t/resources/output.tsv
