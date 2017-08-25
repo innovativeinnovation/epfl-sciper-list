@@ -1,62 +1,78 @@
-# epfl-sciper-list
+<p align="center">
+  <img alt="EPFL Sciper List" src="https://raw.githubusercontent.com/epfl-devrun/epfl-sciper-list/master/docs/readme/readme-logo.png">
+</p>
 
+<p align="center">
+  Get a list of all public active sciper from EPFL.
+</p>
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+<p align="center">
+  <a href="https://travis-ci.org/epfl-devrun/epfl-sciper-list">
+    <img alt="Travis Status" src="https://travis-ci.org/epfl-devrun/epfl-sciper-list.svg?branch=master">
+  </a>
+  <a href="https://coveralls.io/github/epfl-devrun/epfl-sciper-list?branch=master">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/epfl-devrun/epfl-sciper-list/badge.svg?branch=master"/>
+  </a>
+  <a href="https://raw.githubusercontent.com/epfl-devrun/epfl-sciper-list/master/LICENSE">
+    <img alt="MIT License" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
+  </a>
+</p>
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+---
 
+Install
+-------
 
-INSTALLATION
+Via CPAN with :
 
-To install this module, run the following commands:
+```bash
+$ cpan install EPFL::Sciper::List
+```
 
-	perl Build.PL
-	./Build
-	./Build test
-	./Build install
+Usage
+-----
 
-SUPPORT AND DOCUMENTATION
+### Command Line
 
-After installing, you can find documentation for this module with the
-perldoc command.
+```bash
+$ epfl-sciper-list.pl --help
+Usage:
+  epfl-sciper-list.pl
+  epfl-sciper-list.pl --output=json > sciper.json
+  epfl-sciper-list.pl --output=tsv > sciper.tsv
 
-    perldoc EPFL::Sciper::List
+Options:
+  --output=tsv|json
+    Output format in TSV or Json.
+```
 
-You can also look for information at:
+### Module
 
-    RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=EPFL-Sciper-List
+```perl
+use EPFL::Sciper::List qw/retrieveSciper toJson toTsv/;
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/EPFL-Sciper-List
+my @listPersons = retrieveSciper();
+print toJson(@listPersons);
+print toTsv(@listPersons);
+```
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/EPFL-Sciper-List
+Contributing
+------------
 
-    Search CPAN
-        http://search.cpan.org/dist/EPFL-Sciper-List/
+Contributions are always welcome.
 
+See [Contributing](CONTRIBUTING.md).
 
-LICENSE AND COPYRIGHT
+Developer
+---------
 
-Copyright (C) 2017 William Belle
+  * [William Belle](https://github.com/williambelle)
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+License
+-------
 
-    L<http://www.apache.org/licenses/LICENSE-2.0>
+Apache License 2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+(c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017.
 
+See the [LICENSE](LICENSE) file for more details.
