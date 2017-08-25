@@ -1,5 +1,6 @@
 bin/epfl-sciper-list.pl
 Changes
+CONTRIBUTING.md
 ignore.txt
 lib/EPFL/Sciper/List.pm
 LICENSE
