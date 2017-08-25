@@ -9,6 +9,7 @@ _build/
 cover_db/
 blib/
 inc/
+docs/
 .editorconfig
 .travis
 .perltidyrc
