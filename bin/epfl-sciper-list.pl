@@ -22,11 +22,11 @@ Version 0.01
 
 =head1 USAGE
 
-  ./epfl-sciper-list.pl --help
+  epfl-sciper-list.pl --help
 
-  ./epfl-sciper-list.pl --output=json > sciper.json
+  epfl-sciper-list.pl --output=json > sciper.json
 
-  ./epfl-sciper-list.pl --output=tsv > sciper.tsv
+  epfl-sciper-list.pl --output=tsv > sciper.tsv
 
 =head1 OPTIONS
 
