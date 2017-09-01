@@ -31,8 +31,7 @@ my $builder = Module::Build->new(
   },
   meta_merge => {
     resources => {
-      repository =>
-        'https://github.com/epfl-devrun/epfl-sciper-list',
+      repository => 'https://github.com/epfl-devrun/epfl-sciper-list',
     },
   },
   add_to_cleanup     => ['EPFL-Sciper-List-*'],
