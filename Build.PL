@@ -29,6 +29,12 @@ my $builder = Module::Build->new(
     'LWP::UserAgent'       => 6.26,
     'Readonly'             => 2.05,
   },
+  meta_merge => {
+    resources => {
+      repository =>
+        'https://github.com/epfl-devrun/epfl-sciper-list',
+    },
+  },
   add_to_cleanup     => ['EPFL-Sciper-List-*'],
   create_makefile_pl => 'traditional',
 );
