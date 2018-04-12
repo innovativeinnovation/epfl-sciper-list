@@ -38,11 +38,11 @@ Usage
 ### Command Line
 
 ```bash
-$ epfl-sciper-list.pl --help
+$ epfl-sciper-list --help
 Usage:
-  epfl-sciper-list.pl
-  epfl-sciper-list.pl --output=json > sciper.json
-  epfl-sciper-list.pl --output=tsv > sciper.tsv
+  epfl-sciper-list
+  epfl-sciper-list --output=json > sciper.json
+  epfl-sciper-list --output=tsv > sciper.tsv
 
 Options:
   --output=tsv|json

@@ -33,7 +33,7 @@ Run
 ---
 
 ```bash
-$ perl -Ilib bin/epfl-sciper-list.pl
+$ perl -Ilib bin/epfl-sciper-list
 ```
 
 Package
