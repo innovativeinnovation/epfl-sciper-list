@@ -30,7 +30,7 @@ Retrieve sciper from EPFL
     print toJson(@listPersons);
     print toTsv(@listPersons);
 
-Via the command-line program epfl-sciper-list.pl
+Via the command-line program epfl-sciper-list
 
 =head1 DESCRIPTION
 
