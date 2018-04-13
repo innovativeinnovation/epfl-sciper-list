@@ -14,7 +14,7 @@
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/epfl-devrun/epfl-sciper-list/badge.svg?branch=master"/>
   </a>
   <a href="https://raw.githubusercontent.com/epfl-devrun/epfl-sciper-list/master/LICENSE">
-    <img alt="MIT License" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
+    <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
   </a>
   <a href="https://metacpan.org/release/EPFL-Sciper-List">
     <img alt="CPAN Version" src="https://img.shields.io/cpan/v/EPFL-Sciper-List.svg">
