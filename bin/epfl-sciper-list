@@ -6,6 +6,8 @@ use warnings;
 use Getopt::Long;
 use Pod::Usage;
 
+use Carp qw/croak/;
+use English qw/-no_match_vars/;
 use EPFL::Sciper::List qw/retrieveSciper toJson toTsv/;
 
 =head1 NAME
