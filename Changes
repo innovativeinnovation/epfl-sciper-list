@@ -1,5 +1,12 @@
 Revision history for EPFL-Sciper-List
 
+1.00    2018-04-13
+        Add CPAN badge in README
+        Remove extension of epfl-sciper-list
+        Update dependencies
+        Update copyright date
+        Fix license in README
+
 0.02    2017-09-01
         Fix missing dependency File::Find::Rule
 
