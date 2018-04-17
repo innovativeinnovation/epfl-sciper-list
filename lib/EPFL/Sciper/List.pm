@@ -14,11 +14,11 @@ EPFL::Sciper::List - Retrieve a list of all public active sciper from EPFL.
 
 =head1 VERSION
 
-Version 0.02
+Version 1.00
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '1.00';
 
 =head1 SYNOPSIS
 
@@ -30,7 +30,7 @@ Retrieve sciper from EPFL
     print toJson(@listPersons);
     print toTsv(@listPersons);
 
-Via the command-line program epfl-sciper-list
+Via the command line epfl-sciper-list
 
 =head1 DESCRIPTION
 

@@ -20,7 +20,7 @@ Get a list of all public active sciper from EPFL
 
 =head1 VERSION
 
-Version 0.02
+Version 1.00
 
 =head1 USAGE
 
@@ -42,7 +42,7 @@ Output format in TSV or Json.
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '1.00';
 
 my ( $help, $output );
 
