@@ -13,21 +13,21 @@ my $builder = Module::Build->new(
   dist_version_from  => 'lib/EPFL/Sciper/List.pm',
   release_status     => 'stable',
   configure_requires => {
-    'Module::Build' => 0,
+    'Module::Build' => '0.4224',
   },
   build_requires => {
-    'File::Copy::Recursive' => 0.40,
-    'File::Find::Rule'      => 0.34,
-    'IO::All'               => 0.87,
-    'Test::JSON'            => 0.11,
-    'Test::MockModule'      => 0.13,
-    'Test::More'            => 0,
+    'File::Copy::Recursive' => '0.40',
+    'File::Find::Rule'      => '0.34',
+    'IO::All'               => '0.87',
+    'Test::JSON'            => '0.11',
+    'Test::MockModule'      => '0.13',
+    'Test::More'            => '0',
   },
   requires => {
-    'JSON'                 => 2.97,
-    'LWP::Protocol::https' => 6.07,
-    'LWP::UserAgent'       => 6.33,
-    'Readonly'             => 2.05,
+    'JSON'                 => '2.97',
+    'LWP::Protocol::https' => '6.07',
+    'LWP::UserAgent'       => '6.33',
+    'Readonly'             => '2.05',
   },
   meta_merge => {
     resources => {
