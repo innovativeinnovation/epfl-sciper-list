@@ -1,6 +1,9 @@
 Revision history for EPFL-Sciper-List
 
-1.00    2018-04-13
+1.01    2018-04-18
+        Set Module::Build version
+
+1.00    2018-04-17
         Add CPAN badge in README
         Remove extension of epfl-sciper-list
         Update dependencies
