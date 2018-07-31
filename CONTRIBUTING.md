@@ -8,10 +8,10 @@ Setup
 -----
 
 ```bash
-$ git clone EPFL_SCIPER_LIST_REPO
-$ cd epfl-sciper-list
-$ perl Build.PL
-$ perl Build installdeps
+git clone git@github.com:epfl-devrun/epfl-sciper-list.git
+cd epfl-sciper-list
+perl Build.PL
+perl Build installdeps
 ```
 
 Test
@@ -20,27 +20,33 @@ Test
 Unit and integration tests:
 
 ```bash
-$ perl Build test
+perl Build test
 ```
 
 Code coverage:
 
 ```bash
-$ perl Build testcover
+perl Build testcover
+```
+
+To enable Author tests:
+
+```bash
+export RELEASE_TESTING=1
 ```
 
 Run
 ---
 
 ```bash
-$ perl -Ilib bin/epfl-sciper-list
+perl -Ilib bin/epfl-sciper-list
 ```
 
 Package
 -------
 
 ```bash
-$ perl Build dist
+perl Build dist
 ```
 
 Release
