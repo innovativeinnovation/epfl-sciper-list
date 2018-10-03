@@ -26,10 +26,10 @@
 Install
 -------
 
-Via CPAN with :
+Via CPAN with:
 
 ```bash
-$ cpan install EPFL::Sciper::List
+cpan install EPFL::Sciper::List
 ```
 
 Usage
@@ -38,7 +38,7 @@ Usage
 ### Command Line
 
 ```bash
-$ epfl-sciper-list --help
+epfl-sciper-list --help
 Usage:
   epfl-sciper-list
   epfl-sciper-list --output=json > sciper.json
