@@ -56,7 +56,7 @@ Release
   2. Update the file [Changes](Changes)
   3. Package the module.
   4. Upload the package to https://pause.perl.org/
-  5. Create the tag (``git tag -a v<version> -m "Tagging the v<version> release"``) 
+  5. Create the tag (`git tag -a v<version> -m "Tagging the v<version> release"`) 
 
 License
 -------
