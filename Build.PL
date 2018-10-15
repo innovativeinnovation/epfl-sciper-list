@@ -1,4 +1,5 @@
-# (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
+# Original work (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
+# Modified work (c) William Belle, 2018.
 # See the LICENSE file for more details.
 
 use 5.006;
@@ -20,7 +21,7 @@ my $builder = Module::Build->new(
     'File::Find::Rule'      => '0.34',
     'IO::All'               => '0.87',
     'Test::JSON'            => '0.11',
-    'Test::MockModule'      => '0.15',
+    'Test::MockModule'      => '0.170.0',
     'Test::More'            => '0',
   },
   requires => {
@@ -31,7 +32,7 @@ my $builder = Module::Build->new(
   },
   meta_merge => {
     resources => {
-      repository => 'https://github.com/epfl-devrun/epfl-sciper-list',
+      repository => 'https://github.com/innovativeinnovation/epfl-sciper-list',
     },
   },
   add_to_cleanup     => ['EPFL-Sciper-List-*'],

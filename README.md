@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="EPFL Sciper List" src="https://raw.githubusercontent.com/epfl-devrun/epfl-sciper-list/master/docs/readme/readme-logo.png">
+  <img alt="EPFL Sciper List" src="https://raw.githubusercontent.com/innovativeinnovation/epfl-sciper-list/master/docs/readme/readme-logo.png">
 </p>
 
 <p align="center">
@@ -7,13 +7,13 @@
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/epfl-devrun/epfl-sciper-list">
-    <img alt="Travis Status" src="https://travis-ci.org/epfl-devrun/epfl-sciper-list.svg?branch=master">
+  <a href="https://travis-ci.org/innovativeinnovation/epfl-sciper-list">
+    <img alt="Travis Status" src="https://travis-ci.org/innovativeinnovation/epfl-sciper-list.svg?branch=master">
   </a>
-  <a href="https://coveralls.io/github/epfl-devrun/epfl-sciper-list?branch=master">
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/epfl-devrun/epfl-sciper-list/badge.svg?branch=master"/>
+  <a href="https://coveralls.io/github/innovativeinnovation/epfl-sciper-list?branch=master">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/innovativeinnovation/epfl-sciper-list/badge.svg?branch=master"/>
   </a>
-  <a href="https://raw.githubusercontent.com/epfl-devrun/epfl-sciper-list/master/LICENSE">
+  <a href="https://raw.githubusercontent.com/innovativeinnovation/epfl-sciper-list/master/LICENSE">
     <img alt="Apache License 2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
   </a>
   <a href="https://metacpan.org/release/EPFL-Sciper-List">
@@ -76,6 +76,7 @@ License
 
 Apache License 2.0
 
-(c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.
+Original work (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017-2018.  
+Modified work (c) William Belle, 2018.
 
 See the [LICENSE](LICENSE) file for more details.
