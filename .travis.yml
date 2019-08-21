@@ -2,6 +2,7 @@
 # Modified work (c) William Belle, 2018.
 # See the LICENSE file for more details.
 
+dist: trusty
 language: perl
 perl:
   - "5.30"
