@@ -17,7 +17,7 @@ my $builder = Module::Build->new(
     'Module::Build' => '0.4224',
   },
   build_requires => {
-    'File::Copy::Recursive' => '0.44',
+    'File::Copy::Recursive' => '0.45',
     'File::Find::Rule'      => '0.34',
     'IO::All'               => '0.87',
     'Test::JSON'            => '0.11',
@@ -25,9 +25,9 @@ my $builder = Module::Build->new(
     'Test::More'            => '0',
   },
   requires => {
-    'JSON'                 => '2.97',
+    'JSON'                 => '4.02',
     'LWP::Protocol::https' => '6.07',
-    'LWP::UserAgent'       => '6.35',
+    'LWP::UserAgent'       => '6.39',
     'Readonly'             => '2.05',
   },
   meta_merge => {
