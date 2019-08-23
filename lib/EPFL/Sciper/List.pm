@@ -30,8 +30,6 @@ Retrieve sciper from EPFL
     print toJson(@listPersons);
     print toTsv(@listPersons);
 
-Via the command line epfl-sciper-list
-
 =head1 DESCRIPTION
 
 A simple module to retrieve a list of all public active sciper from EPFL.
@@ -165,6 +163,10 @@ sub p_buildUrl {
 =head1 AUTHOR
 
 William Belle, C<< <william.belle at gmail.com> >>
+
+=head1 SEE ALSO
+
+See L<epfl-sciper-list> for the command line.
 
 =head1 BUGS AND LIMITATIONS
 
