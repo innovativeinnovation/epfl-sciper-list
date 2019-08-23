@@ -1,7 +1,7 @@
 Contributing
 ============
 
-Welcome, so you are thinking about contributing ?
+Welcome, so you are thinking about contributing?
 Awesome, this a great place to start.
 
 Setup
@@ -52,11 +52,11 @@ perl Build dist
 Release
 -------
 
-  1. Bump the correct version.
-  2. Update the file [Changes](Changes)
-  3. Package the module.
-  4. Upload the package to https://pause.perl.org/
-  5. Create the tag (`git tag -a v<version> -m "Tagging the v<version> release"`)
+1. Bump the correct version.
+1. Update the file [Changes](Changes)
+1. Package the module.
+1. Upload the package to https://pause.perl.org/
+1. Create the tag (`git tag -a v<version> -m "Tagging the v<version> release"`)
 
 License
 -------
